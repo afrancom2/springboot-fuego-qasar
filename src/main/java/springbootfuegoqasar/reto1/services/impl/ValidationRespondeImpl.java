@@ -22,16 +22,12 @@ import springbootfuegoqasar.reto1.services.IModelServiceValidations;
 @Service
 public class ValidationRespondeImpl implements IModelServiceValidations{
 	
-	private IModelSatelliteService iSatelliteService; // Servicio de control de satelites
-	private IModelServiceMessage modelServiceMessage; // Servicio de control de mensajes
-	private ModelServiceLocationImpl modelServiceLocationImpl;
-	
 	@Autowired
-	public ValidationRespondeImpl(IModelServiceMessage modelServiceMessage, IModelSatelliteService iSatelliteService, ModelServiceLocationImpl modelServiceLocationImpl) {
-		this.modelServiceMessage = modelServiceMessage;
-		this.iSatelliteService = iSatelliteService;
-		this.modelServiceLocationImpl = modelServiceLocationImpl;
-	}
+	private IModelSatelliteService iSatelliteService; // Servicio de control de satelites
+	@Autowired
+	private IModelServiceMessage modelServiceMessage; // Servicio de control de mensajes
+	@Autowired
+	private ModelServiceLocationImpl modelServiceLocationImpl;
 	
 	@Override
 	public ResponseEntity<MessageOutputDTO> topSecret(RequestListDTO request) {
