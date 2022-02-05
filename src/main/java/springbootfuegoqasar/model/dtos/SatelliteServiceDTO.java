@@ -5,7 +5,6 @@ import javax.persistence.GenerationType;
 
 import org.springframework.data.annotation.Id;
 
-
 public class SatelliteServiceDTO {
 
 	@Id

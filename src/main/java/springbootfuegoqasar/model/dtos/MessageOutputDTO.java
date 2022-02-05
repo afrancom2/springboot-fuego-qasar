@@ -4,8 +4,6 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 
-@Entity
-@Table(name="messageOutputDTO")
 public class MessageOutputDTO {
 
 	private PositionDTO position;

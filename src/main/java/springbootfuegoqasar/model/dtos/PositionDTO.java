@@ -6,8 +6,6 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 
-@Entity
-@Table(name="locations")
 public class PositionDTO implements Serializable{
 
 	/**

@@ -8,8 +8,6 @@ import javax.persistence.Table;
 
 import org.springframework.data.annotation.Id;
 
-@Entity
-@Table(name="satellite")
 public class SatelliteDTO {
 
 	@Id

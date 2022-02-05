@@ -10,8 +10,6 @@ import javax.persistence.Table;
 
 import org.springframework.data.annotation.Id;
 
-@Entity
-@Table(name="messageInputDTO")
 public class MessageInputDTO {
 	
 	@Id
