@@ -69,11 +69,11 @@ public class ValidationRespondeImpl implements IModelServiceValidations{
 	
 	public ResponseEntity<MessageOutputDTO> getTopSecret() {
 
-		if (modelServiceMessage.findAll().size() != 3) {
+		if (((List<MessageInputDTO>) modelServiceMessage.findAll()).size() != 3) {
 			return ResponseEntity.notFound().build();
 		}
 
-		List<MessageInputDTO> detalleSatelite = modelServiceMessage.findAll();
+		List<MessageInputDTO> detalleSatelite = (List<MessageInputDTO>) modelServiceMessage.findAll();
 		List<SatelliteServiceDTO> sateliteXdetalle = new ArrayList<>();
 
 		detalleSatelite.forEach((response) -> {
