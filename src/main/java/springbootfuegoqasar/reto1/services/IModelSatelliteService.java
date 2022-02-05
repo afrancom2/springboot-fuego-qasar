@@ -1,19 +1,11 @@
 package springbootfuegoqasar.reto1.services;
 
-import java.util.List;
-import java.util.Optional;
+import org.springframework.data.repository.CrudRepository;
 
 import springbootfuegoqasar.model.dtos.SatelliteDTO;
 
-public interface IModelSatelliteService {
-
-	public List<SatelliteDTO> findAll();
-
-	public Optional<SatelliteDTO> findById(String id);
-
-	public SatelliteDTO save(SatelliteDTO satelite);
+public interface IModelSatelliteService extends CrudRepository <SatelliteDTO, Long>{
 	
 	public SatelliteDTO findByName(String name);
-	
 	
 }
